@@ -1,24 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
+import Navbar from './components/Navbar';
+import JobLists from './components/Jobs/JobLists';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div className='mainContainer'>
+        <table id='hnmain'>
+          <tbody>
+            <tr>
+              <td style={{backgroundColor:"#ff6600"}}>
+                <Navbar/>
+              </td>
+            </tr>
+            <tr style={{height:"10px"}}></tr>
+            <JobLists/>
+          </tbody>
+        </table>
+      </div>
   );
 }
 
